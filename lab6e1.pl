@@ -1,0 +1,12 @@
+exercice(P1,P2,P3,P4,F1,F2,F3,F4):-
+    member(P1,[boulanger,charpentier,tailleur]),
+   member(P2,[forgeron,charpentier,tailleur]),
+   member(P3,[forgeron,boulanger,tailleur]),
+   member(P4,[forgeron,boulanger,charpentier]),
+   member(F1,[boulanger]),
+   member(F2,[forgeron,charpentier,tailleur]),
+   member(F3,[forgeron,charpentier,tailleur]),
+   member(F4,[forgeron,charpentier,tailleur]),
+   P1\=P2,P1\=P3,P1\=P4,P2\=P3,P2\=P4,P3\=P4,
+   P2=F3,F1\=P1,F2\=P2,F3\=P3,F4\=P4,
+   F1\=F2,F1\=F3,F1\=F4,F2\=F3,F2\=F4,F3\=F4.

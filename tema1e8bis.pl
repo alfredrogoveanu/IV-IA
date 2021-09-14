@@ -1,0 +1,10 @@
+plus(0,X,X).
+plus(s(X),Y,Z):-plus(X,s(Y),Z).
+minus(X,0,X).
+minus(s(X),s(Y),Z):-minus(X,Y,Z).
+mult(0,X,0).
+mult(s(X),Y,Z):-mult(X,Y,A),plus(Y,A,Z).
+div(_,0,0).
+div(0,_,0).
+div(X,s(0),X).
+div(X,Y,s(N)):-minus(X,Y,Z),div(Z,Y,N).

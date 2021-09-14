@@ -1,0 +1,12 @@
+%permutation(X,X).
+%permutation([H|T],[T|h]).
+magic([A,B,C],[D,E,F],[G,H,I]):-L=[1,2,3,4,5,6,7,8,9],member(A,L),member(B,L),member(C,L),member(D,L),member(E,L),member(F,L),member(G,L),member(H,L),member(I,L),A+B+C=:=D+E+F,D+E+F=:=G+H+I,G+H+I=:=A+D+G,
+    A+D+G=:=B+E+H,B+E+H=:=C+F+I,C+F+I=:=A+E+I,A+E+I=:=C+E+G,
+    A\=B,A\=C,A\=D,A\=E,A\=F,A\=G,A\=H,A\=I,
+    B\=C,B\=D,B\=E,B\=F,B\=G,B\=H,B\=I,
+    C\=D,C\=E,C\=F,C\=G,C\=H,C\=I,
+    D\=E,D\=F,D\=G,D\=H,D\=I,
+    E\=F,E\=G,E\=H,E\=I,
+    F\=G,F\=H,F\=I,
+    G\=H,G\=I,
+    H\=I.
